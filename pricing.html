@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pricing | DealPass </title>
+        <link rel='stylesheet' href='css/style_two.css'>
+        <link rel="icon" type="image/x-icon" href="src/dealpasslogotrans.png">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="flex items-center justify-between p-4 bg-red-500 text-white">
+            <div class="flex items-center space-x-2">
+                <img src="src/dealpasslogoinverse.png" alt="DealPass Icon" class="h-8 w-8"> 
+                <span class="text-2xl font-bold tracking-tight">
+                    DEALPASS
+                </span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-sm font-medium hover:text-red-200 transition">
+                    Home
+                </a>
+                <a href="index.html#how-it-works" class="text-sm font-medium hover:text-red-200 transition">
+                    How it Works
+                </a>
+                <a href="#business" class="text-sm font-medium hover:text-red-200 transition">
+                    For Businesses
+                </a>
+                <a href="pricing.html" class="text-sm font-medium hover:text-red-200 transition">
+                    Pricing
+                </a>
+            </div>
+            <nav class="flex space-x-4 items-center">
+                <a href="login.html" class="py-1 hover:text-red-200 font-medium transition">
+                    Log In
+                </a>
+                <a href="register.php" class="bg-white text-red-600 px-4 py-2 rounded shadow-sm hover:bg-gray-100 font-bold transition">
+                    Register
+                </a>
+            </nav>
+        </div>
+        <section class="py-20">
+            <div class="text-center mb-10">
+                <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+                    Choose Your Plan
+                </h1>
+                <p class="text-lg text-gray-600 max-w-xl mx-auto">
+                    Whether you are here to save money or grow your business, we have a plan for you.
+                </p>
+            </div>
+            <div class="flex justify-center mb-12">
+                <div class="bg-gray-100 p-1.5 rounded-full inline-flex relative">
+                    <button onclick="togglePlan('customer')" id="btn-customer" class="px-8 py-2.5 rounded-full text-sm font-bold transition-all duration-300 bg-white shadow-sm text-gray-900">
+                        For Shoppers
+                    </button>
+                    <button onclick="togglePlan('shopowner')" id="btn-shopowner" class="px-8 py-2.5 rounded-full text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-900">
+                        For Shop Owners
+                    </button>
+                </div>
+            </div>
+            <div id="customer-plans" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col border border-gray-200 hover:border-gray-300 transition">
+                    <h2 class="text-xl font-bold uppercase text-center text-gray-800 mb-6">Standard Shopper</h2>
+                    <div class="text-center mb-8">
+                        <span class="text-5xl font-extrabold text-gray-900">Free</span>
+                    </div>
+                    <div class="border-t border-gray-100 mb-8"></div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Access to all public deals</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Basic Search Filters</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Save up to 5 Favorites</span>
+                        </li>
+                    </ul>
+                    <div class="mt-auto">
+                        <button class="w-full block bg-gray-100 text-gray-800 font-bold text-center py-4 px-6 rounded-xl hover:bg-gray-200 transition duration-300">
+                            GET STARTED
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-2xl p-8 flex flex-col ring-2 ring-red-500 relative transform md:-translate-y-2">
+                    <span class="absolute top-0 right-6 -mt-4 bg-red-600 text-white text-xs font-bold uppercase px-3 py-1 rounded-full">
+                        Suggested
+                    </span>
+                    <h2 class="text-xl font-bold uppercase text-center text-gray-800 mb-6">DealPass Premium</h2>
+                    <div class="text-center mb-8">
+                        <span class="text-5xl font-extrabold text-gray-900">₱149</span>
+                        <span class="text-gray-500 font-medium">/mo</span>
+                    </div>
+                    <div class="border-t border-gray-100 mb-8"></div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700 font-medium">AI-Powered Deal Suggestions</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Priority Notifications (1hr Early)</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Unlimited Favorites</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Ad-Free Experience</span>
+                        </li>
+                    </ul>
+                    <div class="mt-auto">
+                        <button class="w-full block bg-red-600 text-white font-bold text-center py-4 px-6 rounded-xl hover:bg-red-700 transition duration-300 shadow-lg shadow-red-200">
+                            GO PREMIUM
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="shopowner-plans" class="hidden grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col h-full border border-gray-200 hover:border-gray-300 transition">
+                    <h2 class="text-xl font-bold uppercase text-center text-gray-800 mb-6">Basic Plan</h2>
+                    <div class="text-center mb-8">
+                        <span class="text-5xl font-extrabold text-gray-900">₱500</span>
+                        <span class="text-gray-500 font-medium">/mo</span>
+                    </div>
+                    <div class="border-t border-gray-100 mb-8"></div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Essential Features</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Limited Access</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-gray-300 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-400 line-through">Priority Support</span>
+                        </li>
+                    </ul>
+                    <div class="mt-auto">
+                        <button class="w-full block bg-black text-white font-bold text-center py-4 px-6 rounded-xl hover:bg-red-600 transition duration-300 ease-in-out">
+                            SELECT PLAN
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-2xl p-8 flex flex-col h-full ring-2 ring-black relative transform md:-translate-y-4">
+                    <span class="absolute top-0 right-6 -mt-4 bg-red-600 text-white text-xs font-bold uppercase px-3 py-1 rounded-full">
+                        Most Popular
+                    </span>
+                    <h2 class="text-xl font-bold uppercase text-center text-gray-800 mb-6">Medium Plan</h2>
+                    <div class="text-center mb-8">
+                        <span class="text-5xl font-extrabold text-gray-900">₱1299</span>
+                        <span class="text-gray-500 font-medium">/mo</span>
+                    </div>
+                    <div class="border-t border-gray-100 mb-8"></div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">All Basic Features</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Advanced Analytics</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Priority Email Support</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">More Storage</span>
+                        </li>
+                    </ul>
+                    <div class="mt-auto">
+                        <button class="w-full block bg-black text-white font-bold text-center py-4 px-6 rounded-xl hover:bg-red-600 transition duration-300 ease-in-out">
+                            SELECT PLAN
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col h-full border border-gray-200 hover:border-gray-300 transition">
+                    <h2 class="text-xl font-bold uppercase text-center text-gray-800 mb-6">Enterprise Plan</h2>
+                    <div class="text-center mb-8">
+                        <span class="text-5xl font-extrabold text-gray-900">₱4,999</span>
+                        <span class="text-gray-500 font-medium">/mo</span>
+                    </div>
+                    <div class="border-t border-gray-100 mb-8"></div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Everything in Medium</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Dedicated Account Manager</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">Custom Integrations</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span class="text-gray-700">24/7 Phone Support</span>
+                        </li>
+                    </ul>
+                    <div class="mt-auto">
+                        <button class="w-full block bg-black text-white font-bold text-center py-4 px-6 rounded-xl hover:bg-red-600 transition duration-300 ease-in-out">
+                            CONTACT US
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        function togglePlan(type) {
+            const customerPlans = document.getElementById('customer-plans');
+            const shopownerPlans = document.getElementById('shopowner-plans');
+            const btnCustomer = document.getElementById('btn-customer');
+            const btnShopowner = document.getElementById('btn-shopowner');
+
+            if (type === 'customer') {
+                // Show Customer, Hide Shopowner
+                customerPlans.classList.remove('hidden');
+                shopownerPlans.classList.add('hidden');
+
+                // Update Buttons (Active: White + Shadow / Inactive: Gray text)
+                btnCustomer.classList.add('bg-white', 'shadow-sm', 'text-gray-900');
+                btnCustomer.classList.remove('text-gray-500');
+                
+                btnShopowner.classList.remove('bg-white', 'shadow-sm', 'text-gray-900');
+                btnShopowner.classList.add('text-gray-500');
+            } else {
+                // Show Shopowner, Hide Customer
+                shopownerPlans.classList.remove('hidden');
+                customerPlans.classList.add('hidden');
+
+                // Update Buttons
+                btnShopowner.classList.add('bg-white', 'shadow-sm', 'text-gray-900');
+                btnShopowner.classList.remove('text-gray-500');
+                
+                btnCustomer.classList.remove('bg-white', 'shadow-sm', 'text-gray-900');
+                btnCustomer.classList.add('text-gray-500');
+            }
+        }
+        </script>
+    </section>
+    <footer class="bg-red-500 text-white py-6">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <!-- Left Side -->
+        <p class="font-medium text-sm md:text-base">
+            DealPass 2025
+        </p>
+        <!-- Right Side -->
+        <p class="font-medium text-sm md:text-base">
+            Made by Dicdican & Gamlanga
+        </p>
+    </div>
+    </footer>
+    </body>
+</html>
